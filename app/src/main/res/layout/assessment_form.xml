@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:id="@+id/lin_assessment_details"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_margin="10dp"
+        android:text="Assessment Details"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rel_edi_assessment_details"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/lin_assessment_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edi_assessment_name"
+            android:inputType="textEmailAddress"
+            android:layout_centerHorizontal="true"
+            android:hint="name of Assessment"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edi_number_of_questions"
+            android:layout_below="@+id/edi_assessment_name"
+            android:inputType="number"
+            android:layout_centerHorizontal="true"
+            android:hint="number of questions in Assessment"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edi_total_marks_obtainable"
+            android:layout_below="@+id/edi_number_of_questions"
+            android:inputType="number"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"
+            android:hint="intended total score of assessment"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/edi_number_of_options"
+            android:layout_below="@+id/edi_total_marks_obtainable"
+            android:inputType="number"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"
+            android:hint="number of options"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <Button
+       android:id="@+id/button_done"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffffff"
+        android:elevation="10dp"
+        android:text="Done"
+        android:fadingEdge="vertical"
+        app:layout_constraintRight_toRightOf="@+id/rel_edi_assessment_details"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/rel_edi_assessment_details"
+        android:layout_width="60dp"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/button_back"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffffff"
+        android:elevation="10dp"
+        android:text="Back"
+        android:layout_marginRight="4dp"
+        android:fadingEdge="vertical"
+        app:layout_constraintRight_toLeftOf="@+id/button_done"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/rel_edi_assessment_details"
+        android:layout_width="60dp"
+        android:layout_height="40dp" />
+</android.support.constraint.ConstraintLayout>

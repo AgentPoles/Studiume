@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#852EBA</color>
+    <color name="colorPrimaryDark">#800080</color>
+    <color name="colorPrimarye">#3F51B5</color>
+    <color name="colorPrimaryDarke">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="rash">#eaaeae</color>
+    <color name="rashe">#9A76B3</color>
+    <color name="white">#ffffff</color>
+    <color name="color_letters">#0A2149</color>
+    <color name="ashes">#dddddd</color>
+    <color name="asheb">#eeeeee</color>
+    <color name="blacki_overlay">#bb000102</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InnerQuestion">
+<RelativeLayout
+    android:id="@+id/rel_view_header"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="wrap_content"
+    android:paddingBottom="20dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:id="@+id/return_home"
+        android:src="@drawable/prev"
+        android:layout_width="40dp"
+        android:layout_height="30dp" />
+
+    <ImageView
+        android:layout_below="@id/return_home"
+        android:id="@+id/say_your_questions"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_abb" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_toRightOf="@+id/say_your_questions"
+        android:background="@drawable/greem"
+        android:text="these are your questions for this assessment"
+        android:id="@+id/text_name"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/rel_view_header"
+        android:id="@+id/inner_question_recycler"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/back_to_previous"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/proceed_to_next"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        android:layout_marginRight="20dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/prev"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/proceed_to_next"
+    android:visibility="gone"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginBottom="30dp"
+    android:layout_marginRight="30dp"
+    app:backgroundTint="@color/colorPrimary"
+    android:src="@drawable/next"
+    android:layout_width="50dp"
+    android:layout_height="50dp" />
+
+</RelativeLayout>

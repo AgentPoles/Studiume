@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".profile_activity"
+    tools:showIn="@layout/activity_profile_activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:id="@+id/linename"
+    android:layout_centerHorizontal="true"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <ImageView
+             android:layout_marginLeft="0dp"
+            android:src="@drawable/ic_customer"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:text="sarah billy"
+        android:textColor="@color/color_letters"
+        android:id="@+id/tesxt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/linename"
+            android:layout_marginTop="20dp"
+            android:id="@+id/line_number"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_phone"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="09494949494"
+                android:textColor="@color/color_letters"
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/line_number"
+            android:layout_marginTop="20dp"
+            android:id="@+id/line_email"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_email"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="sarahbilly@yahoo.com"
+                android:id="@+id/text_email"
+                android:textColor="@color/color_letters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/line_email"
+            android:layout_marginTop="20dp"
+            android:id="@+id/line_admin"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_admin"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="champion tutor"
+                android:textColor="@color/color_letters"
+                android:id="@+id/root_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+<LinearLayout
+    android:padding="10dp"
+    android:layout_below="@+id/line_admin"
+    android:background="@color/ashes"
+    android:gravity="bottom"
+    android:layout_marginTop="40dp"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/color_letters"
+            android:text="number of assessments given"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:text="23"
+            android:id="@+id/number_of_assessments_given"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

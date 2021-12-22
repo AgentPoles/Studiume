@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<android.support.v7.widget.CardView
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:id="@+id/lin_question"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/rashe"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="10dp"
+                        android:id="@+id/question_numher"
+                        android:text="question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/current_question_number"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/question_numher"
+                        android:layout_gravity="center_vertical"
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/edit_single_question"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/awsb_ic_edit_animated"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+                <TextView
+                    android:background="@android:drawable/editbox_background"
+                    android:id="@+id/questionet"
+                    android:text="i am goin to the market to buy something fo my mum in such a way that only her can use it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/question_image"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lin_options"
+                android:layout_margin="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:layout_below="@+id/lin_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="@android:drawable/editbox_background"
+                android:id="@+id/lin_options_a"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="A)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/options_a"
+                    android:text="options_a"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <LinearLayout
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/lin_options_b"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="B)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/options_b"
+                        android:text="options_a"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/lin_options_c"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="C)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/options_c"
+                        android:text="options_a"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/lin_options_d"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="D)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/options_d"
+                        android:text="options_a"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/lin_options_e"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="E)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/options_e"
+                        android:text="options_a"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+      <LinearLayout
+          android:id="@+id/lin_answer"
+          android:layout_margin="10dp"
+          android:layout_marginTop="15dp"
+          android:layout_below="@+id/lin_options"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                     android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:text="Answer:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/say_option"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:text="Option"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/answer"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:text="A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+          <ImageView
+              android:visibility="gone"
+              android:id="@+id/answer_image"
+              android:layout_margin="10dp"
+              android:layout_marginTop="5dp"
+              android:layout_gravity="center_horizontal"
+              android:layout_width="100dp"
+              android:layout_height="100dp" />
+      </LinearLayout>
+        </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:id="@+id/lin_loading_question_header"
+    android:background="@color/colorPrimary"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="40dp">
+
+    <ImageView
+        android:id="@+id/gobackimage"
+        android:layout_width="11dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/prev" />
+
+    <TextView
+        android:padding="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="physics assignment"
+        android:background="@drawable/greem"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_centerVertical="true"
+        android:id="@+id/assemment_name_view"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginRight="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/current_question"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="/"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/total_question"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/loading_question_scrollview"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lin_loading_question_header"
+        app:layout_constraintTop_toBottomOf="@+id/lin_loading_question_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+   <android.support.constraint.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <android.support.v7.widget.CardView
+        android:id="@+id/card_question"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+           app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_question_header"
+                android:background="@color/rashe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_letters"
+                    android:text="QUESTION"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/question_attach"
+                    android:src="@drawable/attach"
+                    android:layout_margin="3dp"
+                    android:clickable="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <ImageView
+                    android:id="@+id/question_image"
+                    android:src="@drawable/attach"
+                    android:layout_margin="3dp"
+                    android:clickable="true"
+                  android:layout_toLeftOf="@+id/question_attach"
+                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </RelativeLayout>
+
+     <ImageView
+         android:layout_below="@+id/rel_question_header"
+         android:id="@+id/question_imageview"
+         android:src="@drawable/ic_abb"
+         android:layout_width="150dp"
+         android:layout_height="150dp" />
+            <EditText
+                android:id="@+id/question_edit_text"
+                android:layout_margin="5dp"
+                android:textColor="@color/color_letters"
+                android:fontFamily="casual"
+                android:hint="enter question"
+                android:layout_below="@+id/question_imageview"
+                android:background="@android:drawable/editbox_background"
+                android:minHeight="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_options"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_question"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_option_header"
+                android:background="@color/rashe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_letters"
+                    android:text="OPTIONS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_margin="3dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_options_a"
+                android:layout_below="@+id/rel_option_header"
+                android:background="@android:drawable/editbox_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edi_options_a"
+                    android:layout_margin="5dp"
+                    android:hint="option A"
+                    android:layout_marginRight="30dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/attach_options_a"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/colored_attach"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_options_b"
+                android:layout_below="@+id/rel_options_a"
+                android:background="@android:drawable/editbox_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edi_options_b"
+                    android:layout_margin="5dp"
+                    android:hint="option B"
+                    android:layout_marginRight="30dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/attach_options_b"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/colored_attach"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/rel_options_c"
+                android:layout_below="@+id/rel_options_b"
+                android:background="@android:drawable/editbox_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edi_options_c"
+                    android:layout_margin="5dp"
+                    android:hint="option C"
+                    android:layout_marginRight="30dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/attach_options_c"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/colored_attach"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_options_d"
+                android:layout_below="@+id/rel_options_c"
+                android:background="@android:drawable/editbox_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edi_options_d"
+                    android:layout_margin="5dp"
+                    android:hint="option D"
+                    android:layout_marginRight="30dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/attach_options_d"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/colored_attach"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/rel_options_e"
+                android:layout_below="@+id/rel_options_d"
+                android:background="@android:drawable/editbox_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edi_options_e"
+                    android:layout_margin="5dp"
+                    android:hint="option E"
+                    android:layout_marginRight="30dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/attach_options_e"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/colored_attach"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_options_f"
+                android:layout_below="@+id/rel_options_e"
+                android:background="@android:drawable/editbox_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edi_options_f"
+                    android:layout_margin="5dp"
+                    android:hint="option F"
+                    android:layout_marginRight="30dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/attach_options_f"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/colored_attach"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+              </RelativeLayout>
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/rel_options_f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/explanatory_text_a"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="bold"
+                    android:text="which option is the correct answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                    <RadioGroup
+                     android:id="@+id/radio_group"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/explanatory_text_a"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_a"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="A"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/radio_b"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="B"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/radio_c"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="C"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/radio_d"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="D"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/radio_e"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="E"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:visibility="gone"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="F"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+       <android.support.v7.widget.CardView
+           app:layout_constraintTop_toBottomOf="@+id/card_options"
+           android:id="@+id/card_answer"
+           android:layout_margin="20dp"
+           app:cardCornerRadius="10dp"
+           android:layout_width="match_parent"
+           android:elevation="10dp"
+           android:layout_height="wrap_content">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <RelativeLayout
+                   android:id="@+id/rel_answer_header"
+                   android:background="@color/rashe"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:layout_margin="10dp"
+                       android:textStyle="bold"
+                       android:textColor="@color/color_letters"
+                       android:text="ANSWER"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+                   <ImageView
+                       android:id="@+id/attach_answer"
+                       android:src="@drawable/attach"
+                       android:layout_margin="3dp"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentEnd="true"
+                       android:layout_gravity="end"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp" />
+                   <ImageView
+                       android:id="@+id/answer_image"
+                       android:src="@drawable/attach"
+                       android:layout_margin="3dp"
+                       android:clickable="true"
+                       android:layout_toLeftOf="@+id/attach_answer"
+                       android:layout_gravity="end"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp" />
+               </RelativeLayout>
+
+               <ImageView
+                   android:layout_below="@+id/rel_answer_header"
+                   android:id="@+id/answer_imageview"
+                   android:src="@drawable/ic_abb"
+                   android:layout_width="150dp"
+                   android:layout_height="150dp" />
+               <EditText
+
+                   android:fontFamily="casual"
+                   android:textColor="@color/color_letters"
+                   android:hint="enter answer "
+                   android:id="@+id/answer_edit_text"
+                   android:layout_margin="5dp"
+                   android:layout_below="@+id/answer_imageview"
+                   android:background="@android:drawable/editbox_background"
+                   android:minHeight="100dp"
+                   android:clickable="true"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+           </RelativeLayout>
+       </android.support.v7.widget.CardView>
+
+   </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.andremion.counterfab.CounterFab
+        android:id="@+id/counter_fab"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginRight="20dp"
+        android:layout_margin="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:badgeBackgroundColor="@color/rash"
+        app:badgeTextColor="@color/white"
+        app:badgePosition="RightTop"
+        android:src="@drawable/next" />
+</RelativeLayout>

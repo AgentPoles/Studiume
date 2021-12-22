@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/linename"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_headerthree"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <EditText
+                android:background="@android:drawable/editbox_background"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:hint="sarah billy"
+                android:id="@+id/tesxt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/linename"
+            android:layout_marginTop="20dp"
+            android:id="@+id/line_number"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_headerthree"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:inputType="numberDecimal"
+                android:background="@android:drawable/editbox_background"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:hint="90909090909"
+                android:id="@+id/text_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/line_number"
+            android:layout_marginTop="20dp"
+            android:id="@+id/line_email"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_headerthree"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:inputType="textEmailAddress"
+                android:background="@android:drawable/editbox_background"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:hint="sarahbilly@yahoo.com"
+                android:id="@+id/text_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/line_email"
+            android:layout_marginTop="20dp"
+            android:id="@+id/line_admin"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/ic_headerthree"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:background="@android:drawable/editbox_background"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:hint="champion_tutor"
+                android:id="@+id/root_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:padding="10dp"
+            android:layout_below="@+id/line_admin"
+            android:background="@color/ashes"
+            android:gravity="bottom"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_letters"
+                    android:text="number of assessments given"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:text="23"
+                    android:id="@+id/number_of_assessments_given"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/ic_userperson"
+            android:id="@+id/edit_profile"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/line_admin"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="48dp"
+            android:elevation="10dp"
+            android:layout_height="48dp" />
+        <TextView
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+                 android:layout_below="@+id/edit_profile"
+            android:text="your profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
